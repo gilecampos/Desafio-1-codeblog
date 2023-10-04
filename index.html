@@ -11,29 +11,38 @@
 
 <body>
   <main>
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col d-none d-md-block"></div>
-        <div class="col">
-          <form action="#">
-            <div class="mb-3">
-              <label for="user-name" class="form-label">Usuário</label>
-              <input type="text" class="form-control" id="user-name" placeholder="Digite seu usuário" name="user-name">
+    <div class="container-fluid h-100">
+      <div class="h-100 row justify-content-between align-items-center">
+        <div class="col-6 d-none d-md-block">
+          <div class="row">
+            <div class="col">
+              <img src="src/img/ilustration-image.png" class="img-fluid rounded" alt="">
             </div>
-            <div class="mb-3">
-              <label for="user-email" class="form-label">E-mail</label>
-              <input type="text" class="form-control" id="user-email" placeholder="Digite seu e-mail" name="user-email">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 h-100 bg-white">
+          <div class="h-100 row align-items-center">
+            <div class="col">
+              <form action="#">
+                <div class="mb-3">
+                  <label for="user-name" class="form-label">Usuário</label>
+                  <input type="text" class="form-control" id="user-name" placeholder="Digite seu usuário" name="user-name">
+                </div>
+                <div class="mb-3">
+                  <label for="user-email" class="form-label">E-mail</label>
+                  <input type="text" class="form-control" id="user-email" placeholder="Digite seu e-mail" name="user-email">
+                </div>
+                <div class="mb-3">
+                  <label for="user-password" class="form-label">Senha</label>
+                  <input type="text" class="form-control" id="user-password" placeholder="Digite sua senha" name="user-password">
+                </div>
+                <div class="mb-3">
+                  <label for="user-confirm-password" class="form-label">Confirme sua senha</label>
+                  <input type="text" class="form-control" id="user-confirm-password" placeholder="Confirmar senha" name="user-confirm-password">
+                </div>
+              </form>
             </div>
-            <div class="mb-3">
-              <label for="user-password" class="form-label">Senha</label>
-              <input type="text" class="form-control" id="user-password" placeholder="Digite sua senha" name="user-password">
-            </div>
-
-            <div class="mb-3">
-              <label for="user-confirm-password" class="form-label">Confirme sua senha</label>
-              <input type="text" class="form-control" id="user-confirm-password" placeholder="Confirmar senha" name="user-confirm-password">
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
