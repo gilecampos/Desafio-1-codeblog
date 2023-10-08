@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="src/css/style.css">
+  <script defer src="src/js/index.js"></script>
   <title>Codeblog</title>
 </head>
 
@@ -31,19 +32,38 @@
   <main class="c-main">
     <div class="container">
       <section class="c-post-creator">
-        <button class="c-post-creator__open-modal">Escrever novo post</button>
+        <button class="c-post-creator__open-modal" data-open-modal="open-modal-creator">Escrever novo post</button>
 
 
         <div class="fade hide"></div>
-        <div class="c-modal hide">
+        <div class="c-modal hide" data-modal-creator="modal-creator">
           <div class="c-modal__header">
+            <h2 class="c-modal__title">Codelândia</h2>
+            <h2 class="c-modal__title">blog</h2>
+          </div>
 
+          <div class="c-modal__body">
+            <form action="#">
+              <label for="title-post">
+                Título
+                <input type="text" name="title-post" id="title-post">
+              </label>
+
+              <label for="content-post">
+                Conteúdo
+                <textarea name="content-post" id="content-post"></textarea>
+              </label>
+            </form>
+          </div>
+
+          <div class="c-modal__actions">
+            <button class="c-button c-button--cancelar" data-close-modal="close-modal-creator">Cancelar</button>
+            <button class="c-button c-button--enviar">Postar</button>
           </div>
         </div>
       </section>
       <section class="c-post-list">
         <div class="c-post">
-
         </div>
       </section>
 

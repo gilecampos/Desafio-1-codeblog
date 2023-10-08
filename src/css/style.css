@@ -17,8 +17,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
 /* CSS UTILITY */
@@ -26,6 +26,68 @@ body {
   margin: 0 auto;
   max-width: 900px;
   width: 90%;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  font-weight: 400;
+}
+
+/* Components CSS */
+.fade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+.c-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1.2rem 0;
+  border-radius: 0.5rem;
+  z-index: 10;
+}
+
+.fade,
+.c-modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.c-modal.hide,
+.fade.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.c-modal.hide {
+  top: 0;
+}
+
+.c-button {
+  border: 0;
+  border-radius: 30px;
+  padding: 1.2rem;
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 /* HEADER */
@@ -109,4 +171,88 @@ body {
 
 .c-post-creator__open-modal:hover {
   opacity: 0.7;
+}
+
+/* Modal Creator Post */
+.c-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  color: var(--dark-10);
+
+  border-bottom: 2px solid var(--brand-color);
+}
+.c-modal__title {
+  font-weight: 700;
+}
+
+.c-modal__title:first-child {
+  margin-left: 1.2rem;
+}
+
+.c-modal__title:last-child {
+  margin-right: 1.2rem;
+}
+
+.c-modal__body {
+  padding: 1.2rem;
+  display: flex;
+  width: auto;
+}
+
+.c-modal__body form {
+  width: 100%;
+}
+
+input,
+textarea {
+  border: 2px solid var(--brand-color);
+  border-radius: 5px;
+  padding: 1.2rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--brand-color);
+}
+
+textarea {
+  resize: vertical;
+  height: 200px;
+}
+
+label {
+  font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+  margin-bottom: 1.6rem;
+  width: 100%;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+}
+.c-modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.c-button--enviar {
+  background-color: var(--brand-color);
+  color: var(--white-variant);
+  border: 1px solid var(--brand-color);
+}
+
+.c-button--enviar:hover {
+  background-color: var(--white-variant);
+  color: var(--brand-color);
+}
+
+.c-button--cancelar {
+  border: 1px solid var(--error);
+  color: var(--error);
+}
+
+.c-button--cancelar:hover {
+  background-color: var(--error);
+  color: var(--white-variant);
 }
